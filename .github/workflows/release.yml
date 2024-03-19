@@ -51,7 +51,7 @@ jobs:
       # *****************************************************
       # * Publish
       # *****************************************************
-      - run: pnpm publish
+      - run: pnpm publish:latest
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
