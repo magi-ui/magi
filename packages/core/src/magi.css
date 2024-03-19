@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-kerning: none;
+    font-family: "Avenir-Roman", "Arial", "游ゴシック体", "YuGothic",
+      "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+      "sans-serif";
+  }
+}
+
+@layer utilities {
+  .mg-proportional {
+    font-kerning: auto;
+    font-feature-settings: "palt";
+  }
+}

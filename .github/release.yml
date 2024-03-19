@@ -1,0 +1,57 @@
+name: Publish Latest
+"on":
+  push:
+    branches:
+      - main
+    paths:
+      - "**/package.json"
+      - "**/pnpm-lock.yaml"
+      - "workspaces/**"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # *****************************************************
+      # * SETUP
+      # *****************************************************
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: "pnpm"
+          node-version: "18"
+          registry-url: https://npm.pkg.github.com
+          scope: "@memorylovers"
+
+      - run: pnpm i
+
+      # *****************************************************
+      # * Setup Git Config
+      # *****************************************************
+      - run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # *****************************************************
+      # * Build
+      # *****************************************************
+      - run: pnpm build
+
+      # *****************************************************
+      # * Publish
+      # *****************************************************
+      - run: pnpm publish:latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
