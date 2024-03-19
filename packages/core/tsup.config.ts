@@ -50,10 +50,7 @@ export default defineConfig(async () => {
     },
     onSuccess: async () => {
       await createBulletFile("./dist");
-      await copyStyleFile(
-        "./src/styles/index.css",
-        "./dist/magi-ui.css",
-      );
+      await copyStyleFile("./src/magi.css", "./dist/magi.css");
     },
   };
 });

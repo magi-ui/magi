@@ -72,7 +72,7 @@
       "require": "./dist/*/index.cjs",
       "types": "./dist/*/index.d.ts"
     },
-    "./magi-style": "./dist/magi-ui.css"
+    "./magi-style": "./dist/magi.css"
   },
   "files": [
     "dist",
