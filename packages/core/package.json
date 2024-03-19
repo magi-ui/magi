@@ -1,6 +1,6 @@
 {
   "name": "@magi-ui/core",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
     "build": "tsup",
