@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "turbo build"
+    "build": "turbo build",
+    "version:set": "lerna version --no-git-tag-version --no-push",
+    "publish:latest": "lerna publish --yes --conventional-commits",
+    "publish:canary": "lerna publish --yes --canary --dist-tag beta --preid beta --conventional-commits"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@lerna-lite/cli": "^3.3.1",
+    "@lerna-lite/publish": "^3.3.1",
     "@types/node": "^20.11.15",
     "@types/react": "^18.2.51",
     "@typescript-eslint/eslint-plugin": "^6.4.0",

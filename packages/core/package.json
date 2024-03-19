@@ -1,6 +1,6 @@
 {
   "name": "@magi/core",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
     "build": "tsup",
@@ -77,5 +77,6 @@
   "files": [
     "dist",
     "README.md"
-  ]
+  ],
+  "gitHead": "6595b4c37370c31b25d067a00bc20eec9910ece3"
 }
