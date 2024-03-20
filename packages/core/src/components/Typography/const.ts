@@ -5,16 +5,18 @@ export const TYPOGRAPHY_VARIANTS = tv({
   base: clsx("mg-transition-all"),
   variants: {
     theme: {
-      body: clsx("mg-text-gray-900"),
-      description: clsx("mg-text-gray-700"),
-      placeholder: clsx("mg-text-gray-600"),
-      fill: clsx("mg-text-gray-50"),
+      body: clsx("mg-text-gray-900", "dark:mg-text-white"),
+      description: clsx("mg-text-gray-700", "dark:mg-text-gray-400"),
+      placeholder: clsx("mg-text-gray-600", "dark:mg-text-gray-500"),
+      fill: clsx("mg-text-gray-50", "dark:mg-text-white"),
       link: clsx(
         "mg-text-blue-800",
-        "visited:mg-text-blue-900 hover:mg-text-blue-900 active:mg-text-blue-900"
+        "visited:mg-text-blue-900 hover:mg-text-blue-900 active:mg-text-blue-900",
+        "dark:mg-text-blue-300",
+        "dark:visited:mg-text-blue-200 dark:hover:mg-text-blue-200 dark:active:mg-text-blue-200"
       ),
-      alert: clsx("mg-text-red-700"),
-      disabled: clsx("mg-text-gray-500"),
+      alert: clsx("mg-text-red-700", "dark:mg-text-red-500"),
+      disabled: clsx("mg-text-gray-500", "dark:mg-text-gray-600"),
     },
     size: {
       xs: clsx("mg-text-xs mg-leading-xs mg-tracking-xs"),
