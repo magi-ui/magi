@@ -3,7 +3,10 @@ import { fibonacci, moduler } from "./src/utils/math";
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
 module.exports = {
-  content: ["./src/components/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./.storybook/preview.tsx",
+  ],
   theme: {
     extend: {
       space: ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"]
@@ -180,4 +183,5 @@ module.exports = {
   },
   prefix: "mg-",
   plugins: [],
+  darkMode: "selector",
 };

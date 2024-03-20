@@ -40,6 +40,8 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "storybook": "^7.6.17",
+    "storybook-dark-mode": "^4.0.1",
+    "storybook-tailwind-dark-mode": "^1.0.22",
     "tailwind-merge": "^2.2.2",
     "tailwind-variants": "^0.2.1",
     "tailwindcss": "^3.4.1",
