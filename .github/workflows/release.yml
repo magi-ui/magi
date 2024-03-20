@@ -1,12 +1,5 @@
 name: Publish Latest
 "on":
-  push:
-    branches:
-      - main
-    paths:
-      - "**/package.json"
-      - "**/pnpm-lock.yaml"
-      - "workspaces/**"
   workflow_dispatch:
 
 jobs:
