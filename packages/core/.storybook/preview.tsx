@@ -12,6 +12,19 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: "twitter",
+      values: [
+        {
+          name: "light",
+          value: "#ffffff",
+        },
+        {
+          name: "dark",
+          value: "#101010",
+        },
+      ],
+    },
   },
   globalTypes: {
     darkMode: {
@@ -22,19 +35,7 @@ const preview: Preview = {
       defaultValue: "mg-dark",
     },
   },
-  decorators: [
-    (Story) => (
-      <div
-        className={clsx(
-          "mg-bg-white",
-          "dark:mg-bg-gray-900",
-          "mg-p-4 mg-rounded-lg mg-overflow-hidden"
-        )}
-      >
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <Story />],
 };
 
 export default preview;

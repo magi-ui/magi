@@ -6,7 +6,7 @@ import { TypographyElements, TypographyProps } from "./type";
 
 export const Typography = <Element extends TypographyElements>({
   as,
-  theme,
+  variant,
   size,
   className,
   children,
@@ -16,7 +16,7 @@ export const Typography = <Element extends TypographyElements>({
     as,
     {
       ...props,
-      className: twMerge(TYPOGRAPHY_VARIANTS({ theme, size }), className),
+      className: twMerge(TYPOGRAPHY_VARIANTS({ variant, size }), className),
     },
     children
   );

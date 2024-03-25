@@ -43,14 +43,13 @@ export default defineConfig(async () => {
     sourcemap: true,
     treeshake: true,
     dts: true,
-    clean: true,
     format: ["esm", "cjs"],
     outExtension(ctx) {
       return { js: ctx.format === "esm" ? ".mjs" : ".cjs" };
     },
     onSuccess: async () => {
-      await createBulletFile("./dist");
       await copyStyleFile("./src/magi.css", "./dist/magi.css");
+      await createBulletFile("./dist");
     },
   };
 });

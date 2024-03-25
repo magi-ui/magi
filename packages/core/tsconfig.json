@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "target": "ES2016",
 
     /* Modules */
-    "module": "CommonJS",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]

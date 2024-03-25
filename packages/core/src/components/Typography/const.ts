@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 export const TYPOGRAPHY_VARIANTS = tv({
   base: clsx("mg-transition-all"),
   variants: {
-    theme: {
+    variant: {
       body: clsx("mg-text-gray-900", "dark:mg-text-white"),
       description: clsx("mg-text-gray-700", "dark:mg-text-gray-400"),
       placeholder: clsx("mg-text-gray-600", "dark:mg-text-gray-500"),
@@ -15,7 +15,7 @@ export const TYPOGRAPHY_VARIANTS = tv({
         "dark:mg-text-blue-300",
         "dark:visited:mg-text-blue-200 dark:hover:mg-text-blue-200 dark:active:mg-text-blue-200"
       ),
-      alert: clsx("mg-text-red-700", "dark:mg-text-red-500"),
+      alert: clsx("mg-text-red-800", "dark:mg-text-red-500"),
       disabled: clsx("mg-text-gray-500", "dark:mg-text-gray-600"),
     },
     size: {
