@@ -16,4 +16,39 @@
     font-kerning: auto;
     font-feature-settings: "palt";
   }
+
+  .mg-focus-outline {
+    @apply mg-outline-none;
+    @apply mg-ring-[2.8px];
+    @apply mg-ring-transparent;
+    @apply mg-transition-shadow;
+  }
+
+  .mg-focus-outline-blue {
+    @apply mg-focus-outline;
+  }
+  .mg-focus-outline-blue:focus {
+    @apply mg-ring-blue-500;
+  }
+
+  .mg-focus-within-outline-blue {
+    @apply mg-focus-outline;
+  }
+  .mg-focus-within-outline-blue:focus-within {
+    @apply mg-ring-blue-500;
+  }
+
+  .mg-focus-outline-yellow {
+    @apply mg-focus-outline;
+  }
+  .mg-focus-outline-yellow:focus {
+    @apply mg-ring-yellow-700;
+  }
+
+  .mg-focus-within-outline-yellow {
+    @apply mg-focus-outline;
+  }
+  .mg-focus-within-outline-yellow:focus-within {
+    @apply mg-ring-yellow-700;
+  }
 }
